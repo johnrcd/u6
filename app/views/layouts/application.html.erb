@@ -14,12 +14,19 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "bulma", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <main>
+      <header>
+        <h1>customer website</h1>
+        <ul>
+          <li><a href="/">home</a></li>
+          <li><a href="/customers/alphabetized">alphabetized</a></li>
+          <li><a href="/customers/missing_email">missing email</a></li>
+        </ul>
+      </header>
       <%= yield %>
     </main>
   </body>
