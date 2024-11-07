@@ -15,10 +15,38 @@
  */
 
 img {
-    max-width: 100%;
+    max-width: 30%;
 }
 
 main {
     max-width: 720px;
     margin: auto;
+}
+
+header {
+    border-bottom: 2px solid black;
+}
+
+header h1 {
+    display: block;
+    text-align: center;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+header ul li {
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+.main > *:not(:last-child) {
+    border-bottom: 2px solid gray;
 }

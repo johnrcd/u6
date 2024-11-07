@@ -1,9 +1,11 @@
 <section>
     <h3><%= customer.full_name || "no name provided" %></h3>
-    <p><%= customer.phone_number || "no phone_number provided" %></p>
-    <p><%= customer.email || "no email provided" %></p>
-    <p><%= customer.notes || "no notes provided" %></p>
+    <p>Phone Number: <%= customer.phone_number || "no phone_number provided" %></p>
+    <p>Email: <%= customer.email || "no email provided" %></p>
+    <p>Notes: <%= customer.notes || "no notes provided" %></p>
     <% if customer.image.attached? %>
         <%= image_tag url_for(customer.image) %>
+    <% else %>
+        <p>No image attached.</p>
     <% end %>
 </section>
